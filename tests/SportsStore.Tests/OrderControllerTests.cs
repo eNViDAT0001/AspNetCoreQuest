@@ -43,7 +43,7 @@ namespace SportsStore.Tests
             Cart cart = new Cart();
             cart.AddItem(new Product(), 1);
             // Arrange - create an instance of the controller
-            OrderController target = new OrderController(mock.Object, cart);
+            OrderController target = new OrderController(mock, cart);
             // Arrange - add an error to the model
             target.ModelState.AddModelError("error", "error");
             // Act - try to checkout
